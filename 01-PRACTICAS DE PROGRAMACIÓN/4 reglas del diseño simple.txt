@@ -1,0 +1,17 @@
+4 reglas del diseño simple:
+Prioridad: Pocos Elementos --> Intensiones Claras, Sin Duplicados --> pasar las pruebas
+
+1. Pasar todas las pruebas:
+    Hacer pruebas a nustro código nos ayuda a mejorar su diseño y a la larga nos llevara a hacer clases pequeñas y con un solo proposito
+2. Intensiones Claras:
+    Como programadores debemos hacer nustro codigo comprencible para las posibles personas que puedan utilizarlo
+    - Nombres representativos
+    - Funciones y clases pequeñas
+    - Código como documentación: leer las pruebas debería poder comprender rápidamente de qué se trata una clase
+3. Sin Duplicados:
+    Si se utiliza el mismo código se deberia crear una clase que permita reutilizarlo varas veces en lugar de copiarlo de nuevo
+4. Pocos Elementos: 
+    Al programar hay que hacernos las siguientes preguntas: 
+        ¿Tengo algún código muerto?
+        ¿He extraído demasiado?
+

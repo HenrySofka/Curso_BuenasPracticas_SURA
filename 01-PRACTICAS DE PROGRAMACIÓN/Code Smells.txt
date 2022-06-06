@@ -1,0 +1,27 @@
+Code Smells (Hediondez del código)
+Se refiera a aquellas caracteristicas que nos pueden indicar que algo puede salir mal, como programadores debemos hacer algo 
+al respecto para poder salvar la situación.
+
+Algunas caracteristias del código Smells
+Bloaters: Código, métodos o clases que han incrementado su tamaño y ahora son dificiles de trabajar.
+    - Métodos largos: cuando tiene muchas lineas, hay que pensar en si nuestro metodo resuelve muchos problemas y si podemos 
+    resolverlos de manera aislada
+    - Clases grandes: con el tiempo pueden crecer y debemos preguntarnos si siguen teniendo la misma responsabilidad que cuando las 
+    creamos
+
+Abusar de la orientación a objetos: No aprovechar herencias, no usar métodos heredados, clases con interfaces diferentes pero misma
+    funcionalidad.
+    - Jerarquizas de clases innecesarias: clases que hacen lo mismo pero con nombres diferentes
+    - Herencia mal aplicada: heredar una clase pero no utilizar sus métodos
+
+Bloqueadores del Cambio: Un cambio deriva en refactorizar gran parte del código
+    - Cambio divergente: Al hacer un cambio en una clase debemos cambiar muchos metodos relacionados
+    - Cirugía de escopeta: Hacer cualquier modificación requiere que tengas que realizar pequeños ajustes a diferentes clases
+
+Prescindibles: Elementos inútiles del código, innecesarios y que al quitarlos se entiende mejor.
+    - Comentarios: Utilizar los comentarios solamente para explicar funcionalidades o casos especiales donde el código no se 
+        explique por si mismo
+
+Acopladores: Componentes acoplados excesivamente, no se pueden reemplazar de manera sencilla. Clases dependientes de otras clases.
+    - Hombre en medio: No tener clases que su unica accion es llamar a otras clases
+    - Intimidad inapropiada: Procura que las clases tengan una unica responsabilidad y que puedan resolverla bien 

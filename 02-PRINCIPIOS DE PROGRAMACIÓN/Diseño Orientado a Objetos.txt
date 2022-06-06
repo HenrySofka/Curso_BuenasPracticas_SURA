@@ -1,0 +1,47 @@
+Diseño Orientado a Objetos (de momento la pagina esta incompleta: 06/06/22)
+
+Características del Buen Diseño:
+    - Diseñar componentes pensando en la reutilización y la extensión aumenta la flexibilidad del 
+      software. La Reutilizarlo de código permite reducir costos de desarrollo y se puede 
+      aplicar en diferentes niveles.
+    - El diseño orientado a objetos permite encapsular aspectos de tu aplicación que pueden 
+      varias con el tiempo y separarlos de aquellos que se mantendrán inalterables a fin de 
+      reducir impacto de los cambios.
+
+Las técnicas del encapsulamiento se pueden abordar en diferentes niveles:
+    - Encapsulamiento de Metodos:
+        - Un método que calcula el total de un pedido, incluido el cálculo de los impuestos. 
+          El código relacionado con los impuestos es susceptible de cambiar a futuro por 
+          nuevas leyes o regulaciones. ¿Se debe cambiar todo el método de cálculo de pedido 
+          por un cambio en los impuestos?
+        - Se extrae la lógica del cálculo del impuesto a un método separado, el cual es llamado 
+          por el método original. Los cambios en la forma de calcular los impuestos se realizan 
+          en su método respectivo. Se podrá reutilizar este método en otros que 
+          requieran de realizar dicho cálculo.
+    
+    - Encapsulamiento de Clases:
+        - Con el tiempo un método que ejecuta un comportamiento sencillo puede terminar por extenderse 
+          y refinarse al punto de requerir campos propios y otros métodos de ayuda, 
+          que termina nublando la responsabilidad de la clase original.
+        - En estos casos se deberia reducir la complejidad de las clases creando otras que se 
+          dediquen a cosas concretas, delegando tareas a estas clases y reduciendo la complejidad
+          de una clase grande a varias pequeñas que realizan labores concretas.
+        - Aun cuando las clases se encuentren encapsuladas, es necesario revisar las dependencias 
+          que existen entre si, las técnicas en el uso de Interfaces juegan un papel importante.
+    
+    Programación de Interfaces:
+        - En las dependencias que una clase puede tener sobre otra, ¿la dependencia es realmente 
+          sobre la clase o sobre un comportamiento esperado? si es así, considera usar interfaces.
+
+    Composición antes que Herencia:
+        - Aunque la herencia en principio es un medio de reutilizar código tiene algunos inconvenientes: 
+            1. Una subclase no puede reducir la interfaz de una superclase
+            2. Al sobrescribir métodos estos deben ser compatibles con el de base
+            3. La herencia rompe la encapsulación de la superclase
+            4. Cambios en superclases pueden descomponer funcionalidades de subclases
+            5. Jerarquías de clase paralelas difíciles de mantener
+        - Al no poderse representar con la herencia simple, el código de clases y el número de 
+          clases se desborda más de lo necesario. Existe una alternativa: Composición y Agregación.
+          En lugar de clases de un tipo en concreto, definimos interfaces con los comportamientos
+          esperados y clases concretas que implementen dichos comportamientos.
+          Este es el Patrón de Diseño Strategy.

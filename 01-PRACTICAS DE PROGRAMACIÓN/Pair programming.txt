@@ -1,0 +1,22 @@
+Pair Programming (Programación en Pareja)
+- Busca que dos programadores trabajen en equipo, uno de ellos dirigiendo y el otro cunduciendo (progrmando). 
+También se recomienda que se cambien los roles a cada 30 o 60 minutos para que ambos esten familiarizados con el proyecto.
+- Quien dirige observa a quien conduce, comentando sobre el código buscando resolver la situación que se afronta, mientras que,
+el que conduce comenta las observaciones del que dirige para que este trate de comprender lo que se esta codificando.
+- Algunas ventajas son:
+    - Incentiva la disciplina del equipo por medio de la supervicion conjunta, ya que esos casos ambos trabajan de mejor manera
+    sin tomar descansos largos entre tareas, además se esta mejor preparado para cambios repentinos o interrupciones en los 
+    requicitos del software
+    - Los algoridmos de los códigos mejoran al ser dos personas trabajando, además las pruebas también salen más detalladas
+    al tener una segunda opinion sobre los casos de prueba.
+    - Incrementa el conocimiento, ya que los integrantes del equipo aprenden y se complementan.
+    - Mejora ela ambiente de trabajo, al poder compartir ideas o entablar conversaciones con el par.
+
+Hay 7 comportamientos:
+    1. Pair Pressure: Motivación para que ambos consigan un logro personal.
+    2. Pair Negotiation: Proponer soluciones y juntarlas para obtener la solucion que mejor se adapre al problema.
+    3. Pair Courage: Al no estar solo se puede abordar de mejor manera una tarea retadora.
+    4. Pair Review: Buscar el feedback de un experto ante un problema o una entrega.
+    5. Pair Debugging: Depuración de errores mas rápida que si se hace de forma individual.
+    6. Pair Learning: Aprender y mejorar habilidades mientras se entrega valor a través del trabajo con otro.
+    7. Pair Trust: La persona que dirige ayuda a tener confianza en las habilidades tecnicas, desde la comunicacion y proponiendo ideas.

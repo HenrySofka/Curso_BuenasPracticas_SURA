@@ -1,0 +1,27 @@
+El Paradigma Orientado a Objetos
+
+Un lenguaje de programación es orientado a objetos si incluye elementos que 
+permitan el uso del paradigma:
+    - Encapsulamiento: 
+        - Al contar con unidades como atributos (estados) y métodos (comportamientos)
+          el paradigma describe el software como una interacción entre unidades denominadas clases.
+        - Las instancias de las clases llamadas objetos comparten mensajes manteniendo su integridad
+          encapsulada pero permitiendo la modificación de sus estados según lo requiera el flujo
+          de los programas
+        - El objetivo es garantizar la corrección del estado de un objeto y aislar posibles
+          daños colaterales, código mezclado, entre otros.
+    
+    - Responsabilidad:
+        - Al definir una clase debemos tener en cuenta el motivo para el que fue creada.
+        - Las clases que se diseñan no deberian realizar acciones que no esten relacionadas con
+          su responsabilidad.
+
+¿Cuales son los beneficios de usar el paradigma orientado objetos en el diseño de software?
+    - Reutilización: se puede utilizar codigo en distintas partes del programa 
+    - Modularidad: la facilidad de añadir, suprimir o modificar nuevos objetos nos permite 
+      hacer modificaciones de una forma muy sencilla.
+    - Abstracción: el paradigma orientado a objetos puede modelar prácticamente todo.
+    - Mantenibilidad: al abstraer los programas se hacen más sencillos de leer y comprender.
+    - Extencibilidad: definamos nuevas clases, reutilicemos las que ya tenemos, extendamos el software.
+    - Fiabilidad: Al dividir el problema en partes más pequeñas podemos probarlas de manera 
+      independiente y aislar mucho más fácilmente los posibles errores que puedan surgir.

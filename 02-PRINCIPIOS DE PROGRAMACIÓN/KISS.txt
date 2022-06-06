@@ -1,0 +1,14 @@
+El principio Kiss fue creado en los años 60 para abordar diseños de aeronaves que pudieran ser 
+reparadas rapidamente en caso de una emergencia. Se trata de siempre buscar una solución simple a 
+los problemas y que estas soluciones no desencadenen más problemas debido a su complejidad.
+
+3 conceptos a tener en cuenta en el diseño de soluciones:
+    1. Solucion sencilla para el desarrollo actual que permita su mantenimiento a futuro.
+    2. Escribir solo el código que te permita aprobar una prueba unitaria. En enfoques como TDD
+       es importante definir los caos de prueba.
+    3. Los algoridmos deben ser intuitivos de entender de manera que cualquier otro 
+       programador pueda entenderlos.
+
+En términos generales, cualquier sistema va a funcionar mejor si se mantiene sencillo que complejo. 
+La sencillez de una solución permite que si se presentan fallos podamos restablecer 
+el sistema rápidamente. 

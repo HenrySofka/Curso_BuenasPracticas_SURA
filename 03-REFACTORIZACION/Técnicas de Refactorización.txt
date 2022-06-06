@@ -1,0 +1,46 @@
+Técnicas de Refactorización 
+    - La refactorización es un proceso sistemático que nos permite mejorar el código sin crear 
+      nuevas funcionalidades que puedan transformar nuestros algoritmos en código limpio y 
+      de diseño simple.
+    
+    - Las técnicas de refactorización se pueden categorizar de la siguiente manera: 
+        1. Composición de Métodos: 
+            - Optimizar métodos, eliminar duplicados de código y preparar el camino a mejoras.
+
+            - Extracción de Métodos: 
+                - Problema: Código que puede ser agrupado, puede crecer con el tiempo y se 
+                  ecuentra en un contexto específico dentro de la solución.
+                - Cual es el problema realmente? Contra más líneas tenga un método es más complejo 
+                  de comprender. Extraer métodos agrupando funcionalidades comunes puede volverlo 
+                  más entendible para otros, además podremos utilizarlo si es necesario. 
+                  Al poderse reutilizar podremos evitar de paso el código duplicado.
+                
+                1. Crear un nuevo método y nombrarlo de acuerdo al contexto.
+                2. Pasar el código al método nuevo.
+                3. Recuerda que existen párametros de entrada y salida para variables que el codigo
+                   comparta con el método nuevo.
+                
+                - Solución: Mover el código a un método que lo agrupe y hacer el llamado a este método
+                  cuando sea necesario.
+            
+            - Método InLine:
+                - Problema: un método delega en otro parte de su lógica, no tiene mucho sentido llamar
+                  a otro método que solo haga una tarea.
+                
+                - Cual es el problema? Aunque parezca ir en contravía de la extracción de métodos, 
+                  en ocasiones la lógica de un método es tan simple que no vale la pena la extracción, 
+                  se puede volver confuso la lectura. 
+                  Recuerda el “CONTEXTO” es muy importante. Reducir el número de métodos innecesarios 
+                  optimiza la lectura del código.
+
+                1. Asegurate que el método no es requerido en una subclase
+                2. identifica todos los llamados a este método
+                3. Borra el método
+
+                - Solución: Reemplaza los llamados al método con el contenido del método.
+
+        2. Simplificar Expresiones Condicionales:
+            - Mejorar la lectura de las expreciones condicionales.
+            - Consolidación de Expresiones Condicionales:
+                - Problema:Estructuras condicionales con múltiples opciones pero igual resultado
+                - 

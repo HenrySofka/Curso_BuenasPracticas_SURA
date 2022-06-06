@@ -1,0 +1,17 @@
+Deuda Técnica
+    - Es un concepto utilizado en el desarrollo de software. El mismo hace referencia a los 
+      costos de un esfuerzo que se va a tener que hacer adicionalmente, porque se ha elegido 
+      un desarrollo sencillo y rápido, en lugar de utilizar un mejor enfoque que quizás tomaría 
+      más tiempo.
+    - Algunas causas de la deuda técnica son: 
+        - Presiones del negocio
+        - El negocio no entiende la deuda técnica
+        - Falta de coherencia entre componentes
+        - Falta de pruebas
+        - Falta de documentación
+        - Falta de interés
+        - Largos tiempos de desarrollo
+        - No refactorizar
+        - Falta de seguimiento
+        - Incompetencia
+    

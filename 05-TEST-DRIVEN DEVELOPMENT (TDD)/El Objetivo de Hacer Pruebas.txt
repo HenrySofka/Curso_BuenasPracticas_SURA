@@ -16,7 +16,7 @@ El Objetivo de Hacer Pruebas
               el punto de que es difícil avanzar.
             
             - La entropía se manifista en forma de código que tiende a deteriorarse.
-            - Cada vez que se cambia algo en una base de código, aumenta la cantidad de 
+            - Cada vez que se cambia algo en una base del código, aumenta la cantidad de 
               desorden o entropía.
             - Eventualmente el código se vuelve poco confiable y se hace difícil devolverle estabilidad.
             - Las pruebas unitarias ayudan a garantizar que las funcionalidades existentes funcionen,

@@ -2,7 +2,7 @@ Clean Code (Codigo Limpio)
 - Con esto nos referimos a algo vital para el código y su correcto ciclo de vida.
 - Caracteristicas del código limpio:
     - Es claro de entender: tratar de tener un código claro y legible para nosotros o otros programadores.
-    - No contiene duplicados: tratar de reutilizar el código a medida que se repita y que el proyecto se cresca.
+    - No contiene duplicados: tratar de reutilizar el código a medida que se repita y que el proyecto crezca.
     - Es breve en código y clases: al tener menos código reducimos los bugs y es más fácil de mantener.
     - Pasa todas las pruebas: debe pasar todas las pruebas, pensar en todos los posibles ecenarios y diseñar pruebas a partir de ellos.
 
@@ -12,13 +12,13 @@ Clean Code (Buenas Practicas)
     explicitos y claros
 - Funciones: Deben ser reducidos (~20 lineas) y con nombres descriptivos. Deben hacer una sola cosa y eviar el anidamiento excesivo.
 - Comentarios: Hacer comentarios solo cuando nuestro código no es tan exprecivo con su funcionamiento.
-- Formato: seguir siertas pautas a la hora ed programar
-- Objetos y estructura de datos: 
+- Formato: seguir ciertas pautas a la hora de programar
+- Objetos y estructura de datos: Abstracción de los datos, se debe esconder la implementación de los datos de una clase y generar una interfaz.
 - Procesar Errores: No devolver null y tampoco pasrlos por parametrso. Tratar de devolver una excepcion que nos indique que sucedio 
     en el error
 - Limites: Es mejor encapsular la implementación con la clase genérica en una clase propia que será la que usen los clientes.
 - Pruebas Unitarias: En los test el código creado debe ser el mínimo para que la prueba pase.
-- Clases: Orden dentro de la clase: Contantes estáticas, variables estáticas, variables de instancia y funciones. Primero lo público y
+- Clases: Orden dentro de la clase: Constantes estáticas, variables estáticas, variables de instancia y funciones. Primero lo público y
     después lo privado.
 Sistemas: Separar responsabilidades, que una función o clase no haga todo
 Emergencias: Despues de hacer que el código funcione es donde realmente se aplica el código limpio, refactorizando y mejorandolo antes

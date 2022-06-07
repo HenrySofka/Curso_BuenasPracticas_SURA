@@ -1,0 +1,96 @@
+Principios SOLID
+    - Los principios SOLID, fueron diseñados con la intensión de mejorar el diseño de software 
+      haciendo que tanto el diseño como el software desarrollado fuera mas entendible, flexibles y 
+      de fácil mantenimiento. 
+    - Aunque los principios SOLID se aplican a cualquier diseño orientado a objetos, 
+      también forman una filosofía central para metodologías como el desarrollo ágil o 
+      el desarrollo de software adaptativo.
+    - Los principios son: 
+        1. Single responsibility.
+        2. Open/closed.
+        3. Liskov substitution.
+        4. Interface segregation.
+        5. Dependency inversion.
+
+Principio Singles Responsibility:
+    - Una clase debe tener una única responsabilidad dentro de la funcionalidad que proporciona el 
+      software.
+    - No se sigue el principio cuando:
+        - Describir la funcionalidad de la clase usando conectores como "y, o, pero, si"
+        - Constructores o métodos con muchos parametros
+        - Implementación de métodos demaciado largos y complejos
+        - Clase con baja cohesión (Importante)
+    
+    - Bad Idea: 
+        - Una clase Empleado encargada de gestionar la información de los empleados en la compañía.
+          El formato de los informes de horas de trabajo aunque hace parte de la gestión de esta
+          información puede cambiar con el tiempo.
+    - Good Idea:
+        - Separar el comportamiento que puede cambiar de la clase empleado a otra clase. Con esto
+          podemos aislar posibles errores a futuro al modificar el formato de los informes
+
+Principio Open/Close:
+    - Las clases deben estar abiertas a la extensión (herencia) pero cerradas a la modificación.
+    - Implementar nuevas funcionalidades sin descomponer el código anterior.
+    - No se sigue el principio cuando:
+        - Una clase está siempre abierta a modificaciones
+        - Siempre se encuentra en construcción y recibe actualizaciones constantes debido a su
+          complejidad y falta de responsabilidad.
+
+    - Bad Idea: 
+        - Una clase Pedido que calcula los costos de envío, y todos los métodos relacionados. 
+          Si se requiere agregar un nuevo método de envío se debe modificar la clase con el riesgo 
+          de modificar las funcionalidades previamente descritas.
+    - Good Idea: 
+        - Uso del patrón Strategy, extrayendo métodos de envió y colocándolos en clases 
+          separada con una interfaz  común.
+
+Principio Liskov Substitution:
+    - Una subclase S puede reemplazar a su superclase T sin afectar la funcionalidad del programa.
+      Al sobrescribir un método, se debe extender el componente base y no sustituirlo con algo distinto.
+    - No se sigue el principio cuando:
+        - Subclases rompen la lógica de la jerarquía.
+        - La subclase no puede reemplazar a la superclase en una implementación.
+    
+    - Bad Idea:
+        - Una jerarquía de clases que gestiona documentos en un proyecto, la definición de una
+          subclase de documentos de solo lectura que implementa un método guardar no tiene sentido.
+        
+    - Good Idea:
+        - Se toma como base el documento de solo lectura y se extiende su funcionalidad al 
+          documento que si se puede guardar.
+
+Principio Interface Segregation:
+    - Define interfaces concretas, quienes usan dichas interfaces no deberían implementar 
+      comportamientos que no necesitan.
+    - No se sigue el principio cuando:
+        - Se crean interfaces grandes.
+        - Se intenta Implementar una misma interfaz para todo.
+
+    - Bad Idea: Una interfaz que generaliza el comportamiento de 
+      cualquier proveedor de servicios en la nube. Son todos los servicios de la nube iguales?
+    - Good Idea:
+        - Definición de interfaces que dividen las características de los servicios 
+          de la nube y se implementan para cada proveedor. 
+
+Principio Dependency Inversion:
+    - Las clases de alto nivel no deben depender de clases de bajo nivel.
+    - Clases de alto nivel:
+        - Contienen la lógica de negocio y ordenan las instrucciones enviadas a las clases 
+          de bajo nivel.
+    - Clases de bajo nivel:
+        - Implementan operaciones básicas relacionadas con elementos de infraestructura como:
+          discos, transferencias de datos, base de datos, etc.
+    - No se sigue el principio cuando:
+        - Se desarrolla la lógica de negocio a partir de implentaciones a bajo nivel.
+        - No se define responsabilidades de clases de alto y bajo nivel.
+
+    - Bad Idea:
+        - Una clase de alto nivel encargada de presentar informes de presupuesto, 
+          una clase de bajo nivel encargada de leer y almacenar en una base de datos 
+          la información de estos informes. ¿Para la creación de reportes es indispensable 
+          conocer los detalles del almacenamiento?
+    - Good Idea: 
+        - La definición de una interfaz que sirva como intermediario entre los diferentes 
+          tipos de bases de datos que se pueden implementar, pero que son independientes de 
+          la generación de reportes.

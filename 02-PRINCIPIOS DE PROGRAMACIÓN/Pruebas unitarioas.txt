@@ -1,0 +1,17 @@
+Pruebas unitarias
+    - Cuando tenemos una clase/objeto que tenga dependencias externas debemos simular los
+      comportamientos para no afectar los estados de esa dependencia externa.
+    - Una clase donde se integre de forma directa con una clase y no afecte a los estados de esa
+      clase entonces se puede considerar como prueba unitaria. Por el contrario si hay una afectación
+      entonces no sería una prueba unitaria.
+    
+    - Ciclo de vida de una prueba unitaria
+        - 1. Setup --> 2. test --> 3. tear down
+        - 2.1 Create mock --> 2.2 Expect --> 2.3 Replay --> 2.4 Verify
+    
+    - Principios de una prueba unitaria
+        - Fast (rápido)
+        - Independent (independiente)
+        - Repeatable (Repetible)
+        - Self-validating (auto evaluable)
+        - Timely (oportuno)

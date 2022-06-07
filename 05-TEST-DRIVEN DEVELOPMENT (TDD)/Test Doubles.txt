@@ -1,0 +1,42 @@
+Test Doubles
+    - Un Test Doubles es un objeto simplificado.
+    - Esto reduce la complejidad permitiendo verificar el código independientemente.
+    - Un doble de prueba es un término genérico que se utiliza para estos objetos. 
+      Podemos encontrar 5 tipos de dobles (Fake, Dummy, Stub, Spay, Mock).
+    
+    - Fake:
+        - Los objetos Fake tienen implementaciones funcionales, pero no son adecuados para la producción.
+        - Estos suelen tener una versión simplificada del código de producción.
+        - Un InMemoryTestDatabase es un buen ejemplo (Base de datos en memoria).
+    
+    - Dummy:
+        - Son objetos de los que depende nuestro SUT (System Under Test), pero nunca se utilizan.
+        - Irrelevantes en el alcance de la prueba.
+        - Se utilizan para completar parametros requeridos de constructores o métodos que se desean
+          probar.
+        - Se utilizan para rellenar parametros que son irrelevantes en las pruebas que se estan 
+          realizando.
+    
+    - Stubs:
+        - Son objetos que devuelven datos falsos pero requeridos para las pruebas.
+        - Por lo general, aspectos relacionados con lo que se espera de una prueba, pero
+          no forman parte del comportamiento que se esta probando.
+        - Son objetos con datos ya predefinidos y se usan para responder llamadas durante
+          las pruebas.
+        - Se usan cuando no se quiere o puede involucrar objetos que responderían datos reales.
+
+    - Spies:
+        - Son objetos que capturan salidas indirectas y proporcionan entradas indirectas según 
+          sea necesario.
+        - Con el espía podemos verificar la invocación de los métodos, 
+          por ejemplo, revisar el numero de veces que un método es usado.
+
+    - Mocks:
+        - Es un objeto que es capaz de controlar tanto la entrada como la salida indirecta.
+        - Tiene un mecanismo para la afirmación automática de las expectativas y los resultados.
+        - Estos objetos registran las llamadas que reciben.
+        - Usamos mocks cuando no queremos invocar el código de producción o cuando no hay una manera 
+          fácil de verificar que se ejecutó el código deseado.
+        - El comportamiento del Mock es una combinación de un Spy y un Stub.
+        - Un objeto simulado falla en una prueba si no se invoca un método esperado o 
+          si los parámetros del método no coinciden.

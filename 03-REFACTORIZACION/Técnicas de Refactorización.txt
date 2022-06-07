@@ -1,46 +1,91 @@
 Técnicas de Refactorización 
-    - La refactorización es un proceso sistemático que nos permite mejorar el código sin crear 
-      nuevas funcionalidades que puedan transformar nuestros algoritmos en código limpio y 
-      de diseño simple.
-    
-    - Las técnicas de refactorización se pueden categorizar de la siguiente manera: 
-        1. Composición de Métodos: 
-            - Optimizar métodos, eliminar duplicados de código y preparar el camino a mejoras.
+  - La refactorización es un proceso sistemático que nos permite mejorar el código sin crear 
+    nuevas funcionalidades que puedan transformar nuestros algoritmos en código limpio y 
+    de diseño simple.
+  
+  - Las técnicas de refactorización se pueden categorizar de la siguiente manera: 
+      1. Composición de Métodos: 
+        - Optimizar métodos, eliminar duplicados de código y preparar el camino a mejoras.
 
-            - Extracción de Métodos: 
-                - Problema: Código que puede ser agrupado, puede crecer con el tiempo y se 
-                  ecuentra en un contexto específico dentro de la solución.
-                - Cual es el problema realmente? Contra más líneas tenga un método es más complejo 
-                  de comprender. Extraer métodos agrupando funcionalidades comunes puede volverlo 
-                  más entendible para otros, además podremos utilizarlo si es necesario. 
-                  Al poderse reutilizar podremos evitar de paso el código duplicado.
-                
-                1. Crear un nuevo método y nombrarlo de acuerdo al contexto.
-                2. Pasar el código al método nuevo.
-                3. Recuerda que existen párametros de entrada y salida para variables que el codigo
-                   comparta con el método nuevo.
-                
-                - Solución: Mover el código a un método que lo agrupe y hacer el llamado a este método
-                  cuando sea necesario.
-            
-            - Método InLine:
-                - Problema: un método delega en otro parte de su lógica, no tiene mucho sentido llamar
-                  a otro método que solo haga una tarea.
-                
-                - Cual es el problema? Aunque parezca ir en contravía de la extracción de métodos, 
-                  en ocasiones la lógica de un método es tan simple que no vale la pena la extracción, 
-                  se puede volver confuso la lectura. 
-                  Recuerda el “CONTEXTO” es muy importante. Reducir el número de métodos innecesarios 
-                  optimiza la lectura del código.
+        - Extracción de Métodos: 
+          - Problema: Código que puede ser agrupado, puede crecer con el tiempo y se 
+            ecuentra en un contexto específico dentro de la solución.
+          - Cual es el problema realmente? Contra más líneas tenga un método es más complejo 
+            de comprender. Extraer métodos agrupando funcionalidades comunes puede volverlo 
+            más entendible para otros, además podremos utilizarlo si es necesario. 
+            Al poderse reutilizar podremos evitar de paso el código duplicado.
+          
+          1. Crear un nuevo método y nombrarlo de acuerdo al contexto.
+          2. Pasar el código al método nuevo.
+          3. Recuerda que existen párametros de entrada y salida para variables que el codigo
+              comparta con el método nuevo.
+          
+          - Solución: Mover el código a un método que lo agrupe y hacer el llamado a este método
+            cuando sea necesario.
+        
+        - Método InLine:
+          - Problema: un método delega en otro parte de su lógica, no tiene mucho sentido llamar
+            a otro método que solo haga una tarea.
+          
+          - Cual es el problema? Aunque parezca ir en contravía de la extracción de métodos, 
+            en ocasiones la lógica de un método es tan simple que no vale la pena la extracción, 
+            se puede volver confuso la lectura. 
+            Recuerda el “CONTEXTO” es muy importante. Reducir el número de métodos innecesarios 
+            optimiza la lectura del código.
 
-                1. Asegurate que el método no es requerido en una subclase
-                2. identifica todos los llamados a este método
-                3. Borra el método
+          1. Asegurate que el método no es requerido en una subclase
+          2. identifica todos los llamados a este método
+          3. Borra el método
 
-                - Solución: Reemplaza los llamados al método con el contenido del método.
+          - Solución: Reemplaza los llamados al método con el contenido del método.
 
-        2. Simplificar Expresiones Condicionales:
-            - Mejorar la lectura de las expreciones condicionales.
-            - Consolidación de Expresiones Condicionales:
-                - Problema:Estructuras condicionales con múltiples opciones pero igual resultado
-                - 
+      2. Simplificar Expresiones Condicionales:
+        - Mejorar la lectura de las expreciones condicionales.
+        - Consolidación de Expresiones Condicionales:
+          - Problema:Estructuras condicionales con múltiples opciones pero igual resultado
+          - Cual es el problema? el código tiene muchos operadores que realizan la misma acción, 
+            porque separarlos? en su lugar los consolidamos para separar la lógica del método y 
+            la condición con mayor claridad. También podremos reutilizarlo.
+          - Eliminamos flujos de control duplicados que pueden tener el mismo “destino”.
+          - Al pasar la condición a un método el nombre de este es mas explicativo sobre su 
+            intención.
+          
+          1. Consolidamos condiciones que puedan expresarse con AND u OR. Anidando con AND
+              y consecutivos con OR.
+          2. Extraemos a métodos los operadores dándoles un nombre adecuado.
+
+          - Solución: Consolidarlas en un método que revise la expresón condicional en un solo método.
+              
+        - Reemplazar Condicionales Anidados con Clausulas Adecuadas:
+          - Problema: Condicionales anidadas donde es complejo entender la lógica.
+          - Cual es el problema? Las expresiones anidadas pueden ser complicadas de comprender. 
+            Cual es el flujo normal? cual condición se debe probar más? Al retornar y salir del 
+            método aseguramos que la condición se cumplió y no se evaluará el resto de la lógica. 
+            Al simplificar las condiciones especiales es más claro el código. 
+          
+          1. Identificar los casos especiales de la condición, emite un valor de retorno
+              cuando se cumplan
+          2. Luego de ordenar las condiciones especiales de manera satisfactoria prueba a 
+              consolidarlas en métodos si es necesario.
+          
+          - Solución: Redefinir las condiciones a cláusulas claras, con valor de retorno común.
+  
+  - Las dos categorías de técnicas de refactorización que acabamos de abordar cubren la mayoría 
+    de incidentes que evitan un código limpio, sin embargo existen otras 4 categorías que te 
+    invitamos a explorar:
+
+      3. Mover Funcionalidades entre Objetos:
+        - Aun con funcionalidades distribuidas es importante que los mensajes entre objetos
+          los proteja los detalles de implementación.
+      
+      4. Organizar Datos:
+        - Definición de clases que permiten manipular objetos de una manera adecuada, uso de 
+          Wrappers, clases personalizadas, etc.
+      
+      5. Simplificar Llamados a Métodos:
+        - Los métodos deben ser claros, sencillos y rápidos de implementar, especialmente se usan
+          entre objetos.
+      
+      6. Lidiar con la Generalización:
+        - Controlar el uso de herencias en las aplicaciones, reutilizar código sin que esto sea un
+          problema a largo plazo, difícil de mantener.

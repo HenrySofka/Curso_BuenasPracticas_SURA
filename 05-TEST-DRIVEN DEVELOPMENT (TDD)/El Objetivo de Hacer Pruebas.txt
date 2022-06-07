@@ -1,0 +1,42 @@
+El Objetivo de Hacer Pruebas
+
+    - La relación entre pruebas unitarias y el diseño de código:
+        - La capacidad de ralizar pruebas unitarias en fragmentos de código es bueno, pero esto solo
+          funciona en una dirección.
+        - Es un buen idicador negativo, si al código es difícil aplicarle pruebas unitarias señala un
+          código de mala calidad que necesita mejoras.
+        - La mala calidad en el código generalmente se genera por el bajo desacoplamiento.
+        - Un alto desacoplamiento tampoco es indicador de buena calidad.
+
+        - Entonces, ¿cuál es el objetivo de las pruebas unitarias?:
+            - El objetivo es permitir el crecimiento sostenible del proyecto de software.
+            - Es fácil hacer crecer un priyecto al pincipio, pero es difícil mantener ese crecimiento
+              a lo largo del tiempo.
+            - Un proyecto sin pruebas tiene una ventaja inicial, pero se relentiza rápidamente hasta
+              el punto de que es difícil avanzar.
+            
+            - La entropía se manifista en forma de código que tiende a deteriorarse.
+            - Cada vez que se cambia algo en una base de código, aumenta la cantidad de 
+              desorden o entropía.
+            - Eventualmente el código se vuelve poco confiable y se hace difícil devolverle estabilidad.
+            - Las pruebas unitarias ayudan a garantizar que las funcionalidades existentes funcionen,
+              incluse despues de agregar nuevas funcionalidades o refactorizar las existentes.
+        
+        - ¿Qué hace que una prueba sea buena o mala?
+            - Con malas prueba unitarias relentizamos muy poco el deterioro del código, aunque 
+              sigue siendo mejor que no tener ninguna. Pero no afecta mucho a gran escala.
+            - No es solamente agregar las pruebas, hay que considerar su valor en el proyecto como
+              su costo de mantenimiento (Tiempo dedicado).
+            
+            - Refactorización de la prueba al refactorizar el código subyacente:
+                1. Ejecutar la prueba en cada cambio de código
+                2. Manejo de falsas alarmas generadas por la prueba
+                3. Dedicar tiempo a leer la prueba cuadno intenta comprender cómo el código
+                   subyacente se comporta.
+            
+        - Código de producción frente a código de prueba
+            - Añadir muchas pruebas unitarias puede aumentar el costo de mantenimiento del proyecto.
+            - Siempre es mejor resolver problemas con la menor cantidad de código posible.
+            - Las pruebas deben verse como una parte del código base encargada de resolver un 
+              problema en particular.
+            - Las pruebas unitarias también requieren mantenimiento.

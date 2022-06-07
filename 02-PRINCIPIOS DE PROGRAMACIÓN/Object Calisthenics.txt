@@ -1,0 +1,19 @@
+Object Calisthenics
+
+- Estas tienen por objetivo que el código que produzcamos sea 
+  mantenible, legible, comprobable y compresible a largo plazo.
+
+Las reglas propuestas por Object Calisthenics son:
+    1. Solo un nivel de indentación por método.
+    2. No uses el ELSE.
+    3. Envuelva todas las variables primitivas y cadenas de texto.
+    4. Un solo punto por linea.
+    5. No Abrevies.
+    6. Mantén las entidades pequeñas.
+    7. No use clases con mas de dos variables de instancia.
+    8. Colecciones en su propia Clase.
+    9. No utilice getters / setters / properties.
+    
+
+
+

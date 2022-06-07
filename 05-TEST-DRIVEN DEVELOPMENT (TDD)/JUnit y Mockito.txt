@@ -1,0 +1,17 @@
+JUnit y Mockito
+    - JUNIT 
+        - Es el framework que nos permite escribir y ejecutar pruebas unitarias en Java.
+        - Es el encargado de gestionar la automatización de las pruebas unitarias a fin de 
+          que el trabajo de pruebas se de mediante una ejecución ágil y clara.
+    - MOCKITO
+        - Es un framework que nos permite crear y configurar nuestros dobles de prueba con el 
+          propósito de reducir o incluso eliminar los efectos secundarios del uso de 
+          componentes que no se están probando. 
+
+    - ¿Necesito realmente un Mock?
+        - Un mock, es un simulacro, un suplente para un módulo real.
+        - No contiene ninguna funcionalidad real.
+        - Imita la interfaz de un módulo.
+        - Si la función a la que se llama tiene un valor de retorno, el simulacro 
+          de esa función también devolverá un valor como se especifica en la prueba. 
+        

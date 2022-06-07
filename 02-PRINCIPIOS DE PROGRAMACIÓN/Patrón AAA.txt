@@ -1,0 +1,16 @@
+Organizar las Pruebas
+    - Organizar los objetos, crearlos y configurarlos según sea necesario.
+    - Actuar en un objeto.
+    - Declarar que algo es como se espera.
+
+¿Por qué?
+    - Separar claramente lo que se está probando de los pasos organizar y declarar
+    - Menos posibilidad de mezclar serciones con el código para "actuar"
+
+Las 3 A's del unit testing
+    - Arrange (Organizar):
+        - En esta parte se definen los requisitos que debe cumplir el código
+    - Act (Actuar)
+        - Ejecutar el test que dará lugar a los resultados que deberás analizar
+    - Assert (Afirmar)
+        - Es donde se comprueban si los resultados obtenidos son los esperados

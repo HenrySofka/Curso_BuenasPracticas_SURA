@@ -1,0 +1,68 @@
+La Importancia de la Documentación
+    - Es necesario documentar de manera correcta nuestro código ya que el proyecto de software no
+      se termina al finalizar el desarrollo, puesto que, después comienza la etapa de mantenimiento
+      y necesitamos que los demás miembros del equipo puedan entender nuestro código.
+    
+    - Existen diversas formas de documentar. Una de ellas es la notación UML.
+    - UML nos permite diagramar diferentes caracteristicas del software que sirven como
+      documentación a futuro.
+    
+    -UML:
+        - Representar y comunicar ideas:
+            - Mediante representaciones graficas bien definidas cada grafica tiene su
+              significado concreto.
+        - Moedlos precisos:
+            - Permiten definir, con una alta precisición, los componentes del software final.
+        - Puente entre lenguaje natural y de alto nivel:
+            - En algunos casos, es posible convertir un UML en un lenguaje de alto nivel con el
+              cuidado necesario.
+        -Documentación: 
+            - Cada uno de los artefactos creados en UML puede ser documentado para agregar un nivel
+              mas en la descripción de la solución.
+
+    - Vista 4 + 1:
+        - Modelo de arquitectura que permite describir la arquitectura de software, basado en el
+          uso de múltiples vistas concurrentes.
+        - Cada vista describe el sistema desde una perspectiva diferente.
+            - Usuarios finales
+            - Desarrolladores
+            - Directores del proyecto
+            - Sistemas externos
+            - Sistema de desarrollo
+        
+        - Las vistas propuestas son:
+            - Escenarios:
+                - Orienta la arquitectura de la solución a utilizar un conjunto de "casos de uso".
+            - Vista lógica:
+                - Representa las funcionalidades que el sistema proporcionara a los usuaios finales.
+                  (Diagrama de Clases y Secuencias)
+            - Vista de procesos:
+                - Describe los procesos y la comunicación del sistema a partir de los comportamientos
+                  y las funcionalidades en tiempo de ejecución. (Diagrama de Actividades y Estados)
+            - Vista física:
+                - Describe los nodos de la topología de hardware sobre lo que se ejectua el sistema
+                  bajo la perspectiva de un ingeniero en sistema. (Diagrama de Despliegue)
+            - Vista de implementación:
+                - Modela los componentes y archivos que se utilizan oara ensamblar y hacer funcionar 
+                  el sistema desarrollado. (Diagrama de componentes)
+    
+    - Modelo Conceptual de UML:
+        - Modelos estáticos:
+            - Estos diagramas representan los elementos mas estructurales del sistema:
+            - Diagrama de clases: Muestra un conjunto de clases y sus relaciones.
+            - Diagrama de objetos: Muestra un conjunto de objetos y sus relaciones.
+            - Diagrama de componentes: Muestra la organización y dependencia entre un conjunto de 
+              componentes.
+            - Diagrama de despliegue: Muestra la configuración de nodos de procesamiento y ejecución 
+              y los componentes que habitan en él.
+        
+        - Modelos dinámicos:
+            - Estos diagramas representan los elementos y como se comportan en el sistema:
+            - Diagrama de caso de uso: Muestra un conjutno de casos de uso, sus actores y relaciones.
+            - Diagrama de secuencia: Diagrama de interacción que enfatiza la ordenación 
+              temporal de los mensajes.
+            - Diagrama de colaboración: Diagrama de interacción que enfatiza la organización estructurale
+              de objetos que envíar y reciben mensajes.
+            - Diagama de estado: Centrado en el estado cambiante de un sistema dirigido por eventos.
+            - Diagrama de actividad: Muestra el flujo de una actividad (acción atómica) a otra
+              actividad dentro de un sistema

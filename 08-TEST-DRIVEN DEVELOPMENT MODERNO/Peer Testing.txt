@@ -1,0 +1,33 @@
+Peer Testing
+    - Es una forma de evaluar el trabajo realizado por nuestro compañeros (otros desarrolladores).
+    - Los desarrolladores deben estar a la par entre sí.
+    - Es productivo en la busqueda de un objetivo en común.
+
+    - Flujo de Revisión
+        - SRS document 
+            --> Design 
+                --> Code
+                    --> Code review process
+                        --> Code verification and validation
+                            --> Correct Code
+                                --> Test Phase
+    
+    - Caracteristicas de la revición por pares:
+        - Forma de documentar evaluaciones para detectar defectos, que involucra pares técnicos.
+        - Esta técnica no involucra el equipo de gestión.
+        - Generalmente dirigido por un moderador.
+        - El informe se prepara alistando todos los temas que requieren atención
+
+    - Se promueve las pruebas por pares de forma periódica con una dinámica de transferencia 
+      de conocimiento.
+    - El moderador debe dar feedback de forma constructiva e indicar las mejoras con base a una
+      técnica descrita.  
+
+    - Métodos para realizar revición:
+        - Informal: No es una forma de revisión muy estructurada. Charla con el compañero desarrollador.
+        - Tutoral: Un desarrollador dirige un equipo de programadores y personas interesadas en
+          en el producto de software, se hace la revición y se formulan preguntas (si las hay)
+          con respecto al producto.
+        - Revisión: Método formal de revisar el trabajo de nustros compañeros desarrolladores.
+        - Inspección: Implica la aplicación de varias métricas para cuantificar los resultados del
+          proceso de revisión, a fin de analizar en qué medio el resultado es fructífero o válido.

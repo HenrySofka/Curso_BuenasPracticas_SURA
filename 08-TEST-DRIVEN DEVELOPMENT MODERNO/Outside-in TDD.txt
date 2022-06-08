@@ -1,0 +1,38 @@
+Outside-in TDD
+    - A la hora de desarrollar nuevas funciones, podemos encontrarnos con ciertas preguntas en el camino.
+        - ¿Dónde comenzamos el desarrollo? 
+            - (¿Comienzo a escribir Frontend o a agregar implementación de servidor?)
+        - ¿Cuál es la implementación más eficiente? 
+            - (¿La implementación de X es más rápida que la implementación de Y?)
+        - ¿Cómo afectará la nueva función a nuestro código existente? 
+            - (¿El nuevo código introducirá un error?)
+    - El desarrollo orientado a TDD Outside-in no responde estas preguntas pero nos brinda
+      un enfoque para encontras una respuesta.
+    - Ayuda a evitar la "parálisis de decición", que conduce a plazos extendidos y implementación 
+      incompleta.
+    
+    - ¿Qué es Outside-in TDD?
+        - Es un enfoque que se utiliza para contruir aplicaciones web full-stack.
+        
+        - Utiliza los mismos pasos rojo, verde y refactorizadores de TDD, pero con una advertencia
+            - Una prueba fallida no implica escribir nuevo código.
+            - Puede que se requiera una implementación de una función a un nivel diferente
+        
+        - Comienza en la parte superior del stack (la vista) y escribe pruebas a medida que 
+          avanza hacia a la capa de base de datos.
+
+        - Si una prueba lo empuja a un nivel inferior, reinicie su ciclo de refactorización rojo,
+          verde escribiendo una nueva prueba.
+            - Esta prueba informa la implementación en su nueva capa.
+        - Continúa el ciclo TDD en este nivel inferior hasta que:
+            - Necesita soltar otra capa para implementar el comportamiento deseado.
+            - Ha abordado el motivo de caer a la capa actual.
+            - Una vez alcanzada la razón para soltar una capa, volver a la capa del servidor y ejecute
+              las pruebas nuevamente para ver si se obtiene un resultado diferente.
+            - Las respuestas deben ser las siguientes:
+                - La prueba pasa: Puede comenzar otro ciclo rojo, verde refactorización en el 
+                  nivel del servidor o pasar a la capa de vista.
+                - La prueba falal: Si el error es uno diferente al inical tiende indicar que se 
+                  esta progresando. Esto puede indicar que se necesita una implementación adicional
+                  a nivel de servidor o volver al modelo inferior.
+                    

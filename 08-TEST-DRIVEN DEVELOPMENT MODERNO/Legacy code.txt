@@ -1,0 +1,42 @@
+Legacy code
+    - Motivos para cambiar código existente
+        - Añadir una caracteristica nueva
+            - Añadir caracteristicas nuevas normalmente solicitadas por el cliente, que pueden o no
+              cambiar el código.
+            - Corregir un error
+                - Consiste en solucionar un problema detectado por nosotro o por el cliente.
+            - Mejorar el diseño del código
+                - Cambiar el código con el objetivo de hacerlo mas eficiente sin cambiar su funcionalidad
+                  (Refactorizar)
+        
+    - ¿Cómo nos aseguramos de que no modificamos el comportamiento?
+        - Los test automaticos verifican si los comportamientos siguen ciendo los mismos.
+        - Cuando hay código legado sin test, lo primero que se hace es crear los test.
+    
+    - Estrategias o herramientas para realizar una Refactorizacion
+        - Aislar el dominio
+            - Una de las carencias de trabajar con código legado es que no se tiene bien identificado 
+              y aislado el dominio. 
+            - Ir mutando poco a poco hacian una Arquitectura limpia o similares nos permitirar 
+              ir desacoplando la lógica y comenzar con los tests-
+            - Haciendo que nuestro código sea cada vez mas estable y tolerante a cambios.
+        
+        - Módulos o partes de nuestra aplicación con mas bugs
+            - Tener herramientas para manejar errores.
+            - Tener un sistema de reportes que nos de feedback de la aplicación en producción.
+            - Muchos bugs en una parte del software tiende a ser por falta de tests o por demaciado
+              acoplamiento.
+        
+        - Clases grandes
+            - Estas clases suelen tener muchas responsabilidades, por ende, se deberia aplicar 
+              los principios SOLID en ellas.
+        
+        - Analizar el repositorio del código fuente
+            - Normalmente el acoplamiento surgen de ficheros que siempre van juntos en los commits.
+              Una herramienta que se puede utilizar es Code Maat.
+        
+        - Análisis estatico del código
+            - Existen herramientas que analizan el código proporcionandonos recomendaciones.
+              Algunas de ellas son: Sonarqube, Codescene.
+
+        

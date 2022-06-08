@@ -1,0 +1,38 @@
+El Éxito del TDD
+    - Para que un test unitario sea útil, necesitamos cumplir los siguientes puntos
+        1. Tener bien definidos los requisitos de función a realizar
+            - Debemos saber qué se quiere y qué posibles implicaciones puede tener el código a desarrollar.
+        2. Criterios de aceptación
+            - Contemplar todos los casos posibles, tanto de errores como de exito.
+        3. Cómo vamos a diseñar las pruebas
+            - Para realizar un buen test debemos ceñirnos a testar únicamente la lógica de negocio
+              a implementar. Simulando el resultado de las implemenciones (Mock).
+        4. Qué queremos probar
+            - Cada caso para cada criterio de aceptación deberia tener un test asociado.
+            - Ej: si el caso de "error de validación" es obligatorio deberia tener un test asociado.
+        5. ¿Cuantos test son necesarios?
+            - Tantos como casos nos encontremos. Así nos haceguramos que con suficientes test
+              el funcionamiento del código sea el correcto.
+            - Se recomienda entre 80%-100% de test cubriendo funcionalidades asociadas a las reglas
+              del negocio dentro del proyecto en desarrollo.
+
+    - Ciclo de vida 
+        - El ciclo de vida de TDD se basa en una continua codificación y refactorización.
+            1. Eligir un requisito
+                - Elegir de la lista de requisitos el que pensamos que nos dará mayor conocimiento
+                  del problema del código y que sea fácilmente implementable.
+            2. Codificar la prueba  
+                - Comenzamos escribiendo una prueba para el requisito.
+                - Necesitamos que las especificaciones y los requisitos a implementar sean claros.
+                - Tomar la prespectiva del cliente y considerar el código a través de sus interfaces.
+            3. Verificar que la prueba falla
+                - Si la prueba no falla quiere decir que el requerimiento ya existia o que 
+                  la prueba es errónea.
+            4. Codificar la implementación
+                - Escribir el código mas sencillo que haga que la prueba funcione.
+            5. Ejecutar la prueba automatizada
+                - verifica si todas las pruebas funcionan corectamente.
+            6. Refactorizar
+                - Es el paso final, qie usa para eliminar el código duplicado, dependencias innecesarias, ect.
+            7. Actualizar la lista de requisitos
+                - Se actualiza la lista de requicitos quitando el que hemos realizado.            

@@ -1,0 +1,4 @@
+La base de TDD es el ciclo Rojo-Verde-Refactorización: 
+    - Escribes la prueba, la ejecutas y falla (Rojo)
+    - Se escribe el código suficiente para que pase (Verde)
+    - Se mejora el código (Refactorización) 
